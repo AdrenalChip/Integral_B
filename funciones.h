@@ -74,10 +74,11 @@ void Graph::display()
     }
 
 }
+/*
 void Graph::DFS(int v)
 {
     city.find("v");
-    
+
     visited[v] = true;
     cout << v << " ";
 
@@ -85,5 +86,5 @@ void Graph::DFS(int v)
     for (i = city[v].begin(); i != city[v].end(); ++i)
         if (!visited[*i])
             DFS(*i);
-}
+}*/
 #endif
