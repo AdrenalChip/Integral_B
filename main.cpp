@@ -30,7 +30,7 @@ array<string,100> generatearray(){
 		}
 		lee.close();
 		}else{
-			cout<<"Unable to open file";
+			std::cout<<"Unable to open file";
 		}
 	return arr2;
 }
@@ -84,45 +84,57 @@ array<int,100> generatearray2(int option){
 
 int main(){
 	int flag=0;
+	vector <string> arr3={"Monterrey","Saltillo"};
+	vector <vector<string>> arr2;
+	int lugar=0;
 	while (flag==0){
+			arr2.push_back(arr3);
 			array<string,100> arr=generatearray();
-			int size=sizeof(arr)/sizeof(arr[0]);
+			int size=sizeof(arr)/sizeof(arr[0]);			
+
 			weightedGraph<string> myGraph(size);
 			queue<string> adjacents;
 			for (int i=0;i<size;i++){
 			myGraph.addVertex(arr[i]);
+			}
+
+		myGraph.addEdge(arr[0],arr[2],1);
+		myGraph.addEdge(arr[2],arr[5],1); 
+		myGraph.addEdge(arr[2],arr[1],1); 
+		myGraph.addEdge(arr[3],arr[0],1);
+		myGraph.addEdge(arr[4],arr[3],1);
+		myGraph.addEdge(arr[3],arr[4],1); 
+		myGraph.addEdge(arr[5],arr[0],1); 
+		myGraph.addEdge(arr[1],arr[3],1); 
+
+		for (int i=6;i<size;i++){
+			for (int j=0;j<arr2[lugar].size();j++){
+			myGraph.addEdge(arr[i],arr2[lugar][j],1);
+			}
 		}
-		myGraph.addEdge("Monterrey","Durango",1);
-		myGraph.addEdge("Durango","Tampico",1); 
-		myGraph.addEdge("Durango","Saltillo",1); 
-		myGraph.addEdge("Torreon","Monterrey",1);
-		myGraph.addEdge("Tijuana","Torreon",1);
-		myGraph.addEdge("Torreon","Tijuana",1); 
-		myGraph.addEdge("Tampico","Monterrey",1); 
-		myGraph.addEdge("Saltillo","Torreon",1); 
-			cout<<"Bienvenido\nQue desea hacer?\n1.-Viaje\n2.-Agregar un destino\n3.-Salir\n";
+			std::cout<<"Bienvenido\nQue desea hacer?\n1.-Viaje\n2.-Agregar un destino\n3.-Salir\n";
 		int x;
 		cin>>x;
 		if (x==1){
-			cout<<"Desde que lugar inicia tu viaje? Ingresa numero \n1.-Monterrey \n2.-Saltillo \n3.-Durango \n4.-Torreon \n5.-Tijuana \n6.-Tampico\n";
+			std::cout<<"Desde que lugar inicia tu viaje? Ingresa numero \n1.-Monterrey \n2.-Saltillo \n3.-Durango \n4.-Torreon \n5.-Tijuana \n6.-Tampico\n";
     		int Inicio;
 			cin>>Inicio;
-			cout<<"A donde quieres llegar? Ingresa numero \n1.-Monterrey \n2.-Saltillo \n3.-Durango \n4.-Torreon \n5.-Tijuana \n6.-Tampico\n";
+			std::cout<<"A donde quieres llegar? Ingresa numero \n1.-Monterrey \n2.-Saltillo \n3.-Durango \n4.-Torreon \n5.-Tijuana \n6.-Tampico\n";
     		int Final;
 			cin>>Final;
-			cout<<"El orden a seguir del viaje es el siguiente:\n";
+			std::cout<<"El orden a seguir del viaje es el siguiente:\n";
 			myGraph.DFS(arr[Inicio-1],arr[Final-1]);
 			int serach=myGraph.getIndex(arr[Inicio-1]);
 
-			array<int,100> arr2=generatearray2(serach);
+			array<int,100> arr4=generatearray2(serach);
     		Quadratic < string , int > city(100,string("empty"), myHash );
 			for (int i=0;i<size;i++){
-				city.put(string(arr[i]),arr2[i]);
+				city.put(string(arr[i]),arr4[i]);
 			}
-			cout<<"\nLa distancia de "<< arr[Inicio-1]<<" a "<<arr[Final-1]<<" son "<<city.get(arr[Final-1])<<" km\n";	
+			std::cout<<"\nLa distancia de "<< arr[Inicio-1]<<" a "<<arr[Final-1]<<" son "<<city.get(arr[Final-1])<<" km\n";	
 		}
 		else if(x==2){
-				cout<<"Que ciudad va agregar? (No espacios)";
+				std::cout<<"Que ciudad va agregar? (No espacios)";
 				string add;
 				cin>>add;
 				ofstream foutput; 
@@ -133,17 +145,34 @@ int main(){
    					foutput<<"\n"<<add<<"\n"; 
  				finput.close();
  				foutput.close();
-				cout<<"¿Con que ciudad se conecta?";
-				for (int i=0;i<size;i++){
-					cout<< i+1<<".-"<<arr[i]<<"\n";
+				int f=0;
+				int acetato=0;
+				while (f!=1){
+					std::cout<<"¿Con que ciudades se conecta? (Ingresa numero)";
+					for (int i=0;i<size;i++){
+						std::cout<< i+1<<".-"<<arr[i]<<"\n";
+					}
+					int y;
+					cin>>y;
+					arr3[acetato]=arr[y-1];
+					std::cout<<"Deseas agregar mas ciudades? 1.-Si 2.-No";
+					int x;
+					cin>>x;
+					if (x==2){
+						f=1;
+					}
+					acetato=acetato+1;
+					
 				}
+
 
 
 		}else if(x==3){
 			flag=1;
 			
 		}
+		lugar=lugar+1;
 	}
-	cout<<"Gracias por participar";
+	std::cout<<"Gracias por participar";
 	return 0;
 }
