@@ -4,7 +4,9 @@ El usuario puede ver cual es la ruta optima desde punto A a punto B y asi mismo 
 El usuario puede agregar nuevas ciudades y su conexion con las existentes 
 
 Para la ejecucion del programa:
--Para seleccionar en el menu y seleccionar ciudades favor de poner solamente el numero mostrado
+
+-Para seleccionar en el menu y seleccionar ciudades favor de poner solamente el numero mostrado I(el programa no sabe que hacer con valores invalidos)
+
 -Al agregar ciudades no espacios en el nombre 
 
 # SICT0302B: Toma decisiones
