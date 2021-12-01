@@ -98,3 +98,11 @@ https://www.cs.usfca.edu/~galles/visualization/RadixSort.html
 * Cada que el usuario registra una nueva ciudad, dicha ciudad se registra en el archivo .txt, se vuelve a ejecutar una lectura del mismo para actualizar tnato el grafo como las keys del hashing y una vez finalizado el programa, este borra las ciudades que se agregaron por el usuario y regresa asu estado original
 
 * Implementa mecanismos para consultar información de las estructuras correctos y útiles dentro de un programa., funciones o procedimientos que permitan al usaurio del programa consultar la información guardada en las estrcuturas de datos, es decir, hacer búsquedas u obtener valores específicos (no solo imprimir toda la estructura).
+
+# Correciones:
+
+ -Ya se especifican las utilidades y presenta informacion util para el programa de la manera intencionada
+ 
+ -El funcionamiento del menu ya quedo arreglado
+ 
+ -Se agrego la competencia SICT0303B: Implementa acciones científicas
