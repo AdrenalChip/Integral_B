@@ -1,3 +1,11 @@
+/*
+ *Proyecto Integral B
+ *Graph
+ *Jorge Guerrero Díaz
+ *A01411752
+ *27/11/2021
+*/
+
 #ifndef weight_H_
 #define weight_H_
 
