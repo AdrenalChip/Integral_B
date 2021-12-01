@@ -1,3 +1,10 @@
+/*
+ *Proyecto Integral B
+ *RadixSort
+ *Jorge Guerrero Díaz
+ *A01411752
+ *27/11/2021
+*/
 #ifndef Radix_H_
 #define Radix_H_
 
@@ -49,4 +56,4 @@ void print(int arr[], int n)
     /*for (int i = 0; i < n; i++)
         cout << arr[i] << " ";*/
 }
-#endif;
+#endif
