@@ -52,17 +52,23 @@ Queremos que un array se organize del menor valor al mayor:
 
 Tenemos un array de la siguiente manera: 
         [170, 45, 75, 90, 2, 802, 2, 66]
+        
 Se empieza por las unidades y organizan en grupos si son iguales:        
         [{170, 90}, {2, 802, 2}, {45, 75}, {66}]
+        
 Luego continuan las decenas y nuevamente se organizan por grupos:
         [{02, 802, 02}, {45}, {66}, {170, 75}, {90}]
+        
 Por ultimo comparamos las centenas
         [{002, 002, 045, 066, 075, 090}, {170}, {802}]
+        
 Este seria el array que se nos regresaria:
         [002, 002, 045, 066, 075, 090, 170, 802]
 
 Referencias:
+
 https://www.geeksforgeeks.org/radix-sort/
+
 https://www.cs.usfca.edu/~galles/visualization/RadixSort.html
 
 
