@@ -1,3 +1,10 @@
+/*
+ *Proyecto Integral B
+ *Funcion para el Hash, Lectura y Escritura
+ *Jorge Guerrero Díaz
+ *A01411752
+ *27/11/2021
+*/
 
 #ifndef Graph_H_
 #define Graph_H_
