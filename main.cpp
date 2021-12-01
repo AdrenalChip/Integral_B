@@ -1,3 +1,11 @@
+/*
+ *Proyecto Integral B
+ *Main del programa 
+ *Jorge Guerrero Díaz
+ *A01411752
+ *27/11/2021
+*/
+
 #include <iostream>
 #include <sstream>
 #include <fstream>
@@ -8,6 +16,7 @@
 #include "funciones.h"
 #include "DiGrapht.h"
 #include "weight.h"
+#include "radix.h"
 
 using namespace std;
 
