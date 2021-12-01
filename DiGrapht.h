@@ -1,3 +1,11 @@
+/*
+ *Proyecto Integral B
+ *Funciones para el Grafo
+ *Jorge Guerrero Díaz
+ *A01411752
+ *27/11/2021
+*/
+
 #ifndef DiGrapht_H_
 #define DiGrapht_H_
 
