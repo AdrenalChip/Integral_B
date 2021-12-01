@@ -3,6 +3,10 @@ Se tiene una texto con un registro de diferentes ciudades, dichas ciudades se or
 El usuario puede ver cual es la ruta optima desde punto A a punto B y asi mismo su distancia 
 El usuario puede agregar nuevas ciudades y su conexion con las existentes 
 
+Para la ejecucion del programa:
+-Para seleccionar en el menu y seleccionar ciudades favor de poner solamente el numero mostrado
+-Al agregar ciudades no espacios en el nombre 
+
 # SICT0302B: Toma decisiones
 
 #Graph:
