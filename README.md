@@ -103,6 +103,6 @@ https://www.cs.usfca.edu/~galles/visualization/RadixSort.html
  
  -El funcionamiento del menu ya quedo arreglado
  
- -Se agrego la competencia SICT0303B: Implementa acciones científicas
+ -Se modifico la competencia SICT0303B: Implementa acciones científicas
  
- -Se agrego la competencia SEG0702A Tecnologías de Vanguardia
+ -Se modifico la compentencia SEG0702A Tecnologías de Vanguardia
