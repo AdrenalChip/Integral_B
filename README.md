@@ -1,26 +1,26 @@
 # Integral_B
-Se tiene una texto con un registro de diferentes ciudades, dichas ciudades se organizan en un grafo, donde establecemos conexiones entre ellas. Usamos una estrcutura de hashing para guardar valores de distancia usando como Keys los nombres de dichas ciudades. 
+Se tiene una texto con un registro de diferentes ciudades, dichas ciudades se organizan en un grafo, donde establecemos conexiones entre ellas. Usamos una estrcutura de hashing para guardar valores de distancia usando como Keys los nombres de dichas ciudades.
+
 El usuario puede ver cual es la ruta optima desde punto A a punto B y asi mismo su distancia 
-El usuario puede agregar nuevas ciudades y su conexion con las existentes 
 
 Para la ejecucion del programa:
 
--Para seleccionar en el menu y seleccionar ciudades favor de poner solamente el numero mostrado I(el programa no sabe que hacer con valores invalidos)
+-Para seleccionar en el menu y seleccionar ciudades favor de poner solamente el numero mostrado (el programa no sabe que hacer con valores invalidos)
 
 -Al agregar ciudades no espacios en el nombre 
+
+# AL TERMINAR ELIMINAR LA LINEA NUEVA QUE SE GENERA EN EL TXT 
 
 # SICT0302B: Toma decisiones
 
 #Graph:
 
-Teniendo una base de datos con ciudades se genera un grafo capaz de almacenar la relacion entre ellas previamente establecidas por el programa y a si mismo el Usuario puede ingresar nuevas ciudades junto con sus relaciones con otras.
-
+Teniendo una base de datos con ciudades se genera un grafo capaz de almacenar la relacion entre ellas previamente establecidas por el programa.
 Usando un DFS buscamos que dependiendo de las ciudades ingresados por el usuario se le presente la mejor ruta para llegar al destino deseado.
 
 #Hashing:
 
-Usamos un estructura de Hashing para almacenar la distancia entre ciudades, y es capaz de generar nuevas distancias conforme el usuario agregue nuevas ciudades.
-
+Usamos un estructura de Hashing para almacenar la distancia entre ciudades.
 Tomando como referencia las ciudades usadas por el DSF usamos la funcion get para obtener la distancia en ese especifico caso.
 
 # SEG0702A Tecnologías de Vanguardia
@@ -86,16 +86,14 @@ https://www.cs.usfca.edu/~galles/visualization/RadixSort.html
  
  1.-Viaje: se le presentan al usuario las ciudades registradas obtenidas de leer el txt y el selecciona desde donde iniciar y a donde busca llegar, en funcion de eso se implemente el DFS para obtener la mejor ruta posible, y posteriormente usando la ciudad que ingreso el usuario se usa como key para que nuestro hash nos diga la distancia a la que esta una de otra.
  
- 2.- Agregar Ciudades: el usuario tiene la opcion de agregar nuevas ciudades, una a la vez, se escriben el txt, y el sistema muestra al usuario las demas ciudades y le pregunta a que ciudades esta conectadas, esto se hace para unir la nueva ciudad en el grafo.
+ 2.-Ciudad mas cercana: Al usuario se le presentan las ciudades y escoge alguna, tomando su eleccion como key para el hashing obtenemos las distancias entre todas las demas ciudades y usando el RadixSort imprime al usuario aquella con el numero mas pequeño  
  
- 3.-Ciudad mas cercana: Al usuario se le presentan las ciudades y escoge alguna, tomando su eleccion como key para el hashing obtenemos las distancias entre todas las demas ciudades y usando el RadixSort imprime al usuario aquella con el numero mas pequeño  
- 
- 4.-Salir: el programa termina 
+ 3.-Salir: el programa termina 
  
 #Archivos:
 * Archivo de texto "ciudades.txt" en donde estan almacenadas las ciudades utilizadas por el programa, el programa lee el archivo y alamcena las variables para la generacion de grafos y la generacion de las keys del hashing.
 
-* Cada que el usuario registra una nueva ciudad, dicha ciudad se registra en el archivo .txt, se vuelve a ejecutar una lectura del mismo para actualizar tnato el grafo como las keys del hashing y una vez finalizado el programa, este borra las ciudades que se agregaron por el usuario y regresa asu estado original
+* Al inicion del programa se escribe en el txt una ciudad nueva.
 
 * Implementa mecanismos para consultar información de las estructuras correctos y útiles dentro de un programa., funciones o procedimientos que permitan al usaurio del programa consultar la información guardada en las estrcuturas de datos, es decir, hacer búsquedas u obtener valores específicos (no solo imprimir toda la estructura).
 
@@ -106,3 +104,5 @@ https://www.cs.usfca.edu/~galles/visualization/RadixSort.html
  -El funcionamiento del menu ya quedo arreglado
  
  -Se agrego la competencia SICT0303B: Implementa acciones científicas
+ 
+ -Se agrego la competencia SEG0702A Tecnologías de Vanguardia
