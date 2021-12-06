@@ -3,7 +3,7 @@
  *Main del programa 
  *Jorge Guerrero Díaz
  *A01411752
- *27/11/2021
+ *06/12/2021
 */
 
 #include <iostream>
@@ -53,14 +53,9 @@ int main(){
 		myGraph.addEdge(arr[3],arr[4],1); 
 		myGraph.addEdge(arr[5],arr[0],1); //Tampico -> Monterrey
 		myGraph.addEdge(arr[1],arr[3],1); //Saltillo
-		//myGraph.addEdge(arr[0],arr[5],1); //Monterrey -> Tampico
+		myGraph.addEdge(arr[6],arr[0],1);
 
-		for (int i=6;i<size;i++){
-			for (int j=0;j<arr2[lugar].size();j++){
-			myGraph.addEdge(arr[i],arr2[lugar][j],1);
-			}
-		}
-			std::cout<<"Bienvenido\nQue desea hacer?\n1.-Viaje\n2.-Agregar un destino\n3.-Ciudad mas cercana esta a\n4.-Salir\n";
+			std::cout<<"Bienvenido\nQue desea hacer?\n1.-Viaje\n2.-Ciudad mas cercana esta a\n3.-Salir\n";
 		int x;
 		cin>>x;
 		if (x==1){
@@ -90,33 +85,7 @@ int main(){
 				city.put(string(arr[i]),arr4[i]);
 			}
 			std::cout<<"\nLa distancia de "<< arr[Inicio]<<" a "<<arr[Final]<<" son "<<city.get(arr[Final])<<" km\n";	
-		}
-		else if(x==2){
-				std::cout<<"Que ciudad va agregar? (No espacios)";
-				string add;
-				cin>>add;
-				write(add);
-				int f=0;
-				int acetato=0;
-				while (f!=1){
-					std::cout<<"¿Con que ciudades se conecta? (Ingresa numero) \n";
-					int i=0;
-					while(arr[i] != "\0"){
-						std::cout<<i<<".-"<<arr[i]<<"\n";
-						i=i+1;
-					};
-					int y;
-					cin>>y;
-					arr3[acetato]=arr[y];
-					std::cout<<"Deseas agregar mas ciudades? 1.-Si 2.-No";
-					int x;
-					cin>>x;
-					if (x==2){
-						f=1;
-					}
-					acetato=acetato+1;
-				}
-		}else if(x==3){
+		}else if(x==2){
 				cout<<"Desde que ciudad? (ingrese un numero del 1 hasta el ...) \n";
 				int i=0;
 				while(arr[i] != "\0"){
@@ -134,7 +103,7 @@ int main(){
 				}
     			radixsort(arr5,i);
 				print(arr5,i);
-		}else if(x==4){
+		}else if(x==3){
 			flag=1;
 		}
 		lugar=lugar+1;
